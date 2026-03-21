@@ -12,9 +12,9 @@ body {
   @apply bg-court min-h-screen text-cream;
   font-family: 'Space Grotesk', 'Archivo', system-ui, -apple-system, sans-serif;
   background:
-    radial-gradient(110% 60% at 50% 0%, rgba(111, 143, 118, 0.45), transparent 60%),
-    radial-gradient(140% 90% at 50% 20%, rgba(15, 59, 45, 0.85), transparent 75%),
-    #0f3b2d;
+    radial-gradient(120% 70% at 50% 0%, rgba(200, 255, 77, 0.08), transparent 60%),
+    radial-gradient(120% 60% at 20% 20%, rgba(111, 143, 118, 0.25), transparent 60%),
+    linear-gradient(180deg, #0f3b2d 0%, #0c2f24 60%, #0c2f24 100%);
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
