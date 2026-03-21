@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tennis Score logo">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d9ff57"/>
+      <stop offset="70%" stop-color="#8ecf2f"/>
+      <stop offset="100%" stop-color="#64b423"/>
+    </linearGradient>
+    <radialGradient id="g2" cx="30%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#g1)"/>
+  <path d="M40 470 C 190 410 340 140 470 40" stroke="#ffffff" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <ellipse cx="310" cy="360" rx="220" ry="200" fill="#93d83a" opacity="0.65"/>
+  <rect width="512" height="512" fill="url(#g2)"/>
+</svg>
