@@ -65,7 +65,7 @@ function App() {
 
         <main className="space-y-14 pb-20">
           <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-6 rounded-[40px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/Game-Screen-2.png"
@@ -74,15 +74,15 @@ function App() {
                 onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
               />
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 order-1 lg:order-2">
               <h2 className="uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Track matches on apple watch</h2>
             </div>
           </section>
           <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
-            <div className="space-y-3">
+            <div className="space-y-3 order-1">
               <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Ready to play in seconds</h2>
             </div>
-            <div className="relative">
+            <div className="relative order-2">
               <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/Game-Setup.png"
@@ -93,7 +93,7 @@ function App() {
             </div>
           </section>
           <section className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center">
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/History-Screen.png"
@@ -102,7 +102,7 @@ function App() {
                 onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
               />
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 order-1 lg:order-2">
               <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">All your matches in one place</h2>
             </div>
           </section>
