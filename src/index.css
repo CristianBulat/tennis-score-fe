@@ -17,11 +17,12 @@ body {
   @apply bg-court min-h-screen text-cream;
   font-family: 'Space Grotesk', 'Archivo', system-ui, -apple-system, sans-serif;
   background-color: #0f3b2d;
-  background:
+  /* background:
     radial-gradient(120% 70% at 50% 0%, rgba(200, 255, 77, 0.08), transparent 60%),
     radial-gradient(120% 60% at 20% 20%, rgba(111, 143, 118, 0.25), transparent 60%),
     linear-gradient(180deg, #0f3b2d 0%, #0c2f24 60%, #0c2f24 100%);
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; */
+  background: #0f3b2d;
   margin: 0;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
