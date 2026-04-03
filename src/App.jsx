@@ -1,116 +1,117 @@
 const screenshots = [
-  { title: 'Create Match', src: '/screenshots/create-match.png' },
-  { title: 'Live Scoring', src: '/screenshots/live-score.png' },
-  { title: 'Match History', src: '/screenshots/history.png' },
-  { title: 'Apple Watch', src: '/screenshots/watch.png' },
+  { title: 'Create Match', src: '/screenshots/create-match.png', desc: 'Set players, format, and first serve fast.' },
+  { title: 'Live Scoring', src: '/screenshots/live-score.png', desc: 'Point-by-point with undo and advantage.' },
+  { title: 'Match History', src: '/screenshots/history.png', desc: 'Scores stay on-device.' },
+  { title: 'Apple Watch', src: '/screenshots/watch.png', desc: 'Score from your wrist.' },
 ];
 
-const APP_STORE_URL = 'https://apps.apple.com/'; // replace with production link when available
+const APP_STORE_URL = 'https://apps.apple.com/md/app/tennis-score-app/id6760890692/'; // replace with production link when available
 
 function App() {
   return (
     <div className="min-h-screen text-cream bg-court">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(120%_70%_at_50%_0%,rgba(200,255,77,0.08),transparent),radial-gradient(90%_70%_at_80%_10%,rgba(255,255,255,0.06),transparent)]" />
-      <div className="max-w-5xl mx-auto px-6">
-        <header className="pt-12 pb-10 space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-2xl bg-cream/10 grid place-items-center overflow-hidden ring-1 ring-cream/10">
+      <div className="max-w-6xl mx-auto px-6">
+        <header className="pt-12 pb-12">
+          <div className="grid gap-8 sm:grid-cols-[1.1fr_0.9fr] items-center">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="h-16 w-16 rounded-2xl bg-cream/10 grid place-items-center overflow-hidden ring-1 ring-cream/10">
+                  <img
+                    src="/logo.png"
+                    alt="Tennis Score logo"
+                    className="h-full w-full object-cover"
+                    onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/120x120/c8ff4d/0f3b2d&text=Logo'; }}
+                  />
+                </div>
+                <p className="text-3xl uppercase font-semibold tracking-[0.16em] text-cream/80 font-sans">Tennis Score App</p>
+              </div>
+
+              <div className="space-y-2">
+                <h1 className="text-3xl sm:text-4xl font-semibold leading-tight">Track every match. Anywhere.</h1>
+                <p className="text-cream/80 text-base leading-relaxed max-w-xl">
+                  Built for iPhone, and Apple Watch. Offline-first with calm colors and big, low-distraction controls.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={APP_STORE_URL}
+                  className="px-4 py-3 rounded-2xl bg-cream text-court font-semibold shadow-soft border border-outline/30 hover:bg-cream/90 transition focus:outline-none focus:ring-2 focus:ring-cream/60 inline-flex items-center justify-center gap-2 whitespace-nowrap"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"></path></svg>
+                  Download on the App Store
+                </a>
+              </div>
+
+              <div className="flex flex-wrap gap-2 text-xs text-cream/75">
+                <span className="px-3 py-2 rounded-xl border border-outline/30">iPhone</span>
+                <span className="px-3 py-2 rounded-xl border border-outline/30">Apple Watch</span>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-2xl" aria-hidden />
               <img
-                src="/logo.svg"
-                alt="Tennis Score logo"
-                className="h-full w-full object-cover"
-                onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/120x120/c8ff4d/0f3b2d&text=Logo'; }}
+                src="/screenshots/Game-Screen.png"
+                alt="Live scoring screen"
+                className="relative w-full h-full object-contain rounded-[80px] "
               />
-            </div>
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-cream/70">Tennis Score</p>
-              <h1 className="text-3xl sm:text-4xl font-semibold leading-tight">Court-side scoring, as clean as your serve.</h1>
-            </div>
-          </div>
-
-          <p className="text-cream/80 text-base leading-relaxed max-w-3xl">
-            Built for iPhone, iPad, and Apple Watch with large tap targets, offline reliability, and a calm color system that matches the native app. No web sharing—everything stays on your devices.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={APP_STORE_URL}
-              className="px-4 py-3 rounded-2xl bg-gradient-to-r from-limeGlow to-maroon text-court font-semibold shadow-soft hover:opacity-95 transition focus:outline-none focus:ring-2 focus:ring-cream/70"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download on the App Store
-            </a>
-            <a href="#screens" className="px-4 py-3 rounded-2xl border border-outline/25 text-cream/85 hover:bg-cream/5 transition">
-              View screenshots
-            </a>
-            <div className="flex flex-wrap gap-2 text-xs text-cream/75">
-              <span className="px-3 py-2 rounded-xl border border-outline/30">iOS</span>
-              <span className="px-3 py-2 rounded-xl border border-outline/30">iPadOS</span>
-              <span className="px-3 py-2 rounded-xl border border-outline/30">watchOS</span>
-              <span className="px-3 py-2 rounded-xl border border-outline/20 bg-cream/5">Native only · no web sharing</span>
             </div>
           </div>
         </header>
 
-        <main className="space-y-12 pb-16">
-          <section className="grid gap-4 sm:grid-cols-3">
-            {[
-              { title: 'One-tap points', desc: 'Oversized buttons, haptics, and undo so you never lose the flow.' },
-              { title: 'Structured sets', desc: 'Best-of formats with the same maroon/cream tiles you see in-app.' },
-              { title: 'Stay on wrist', desc: 'Apple Watch companion keeps scoring off your phone when you play.' },
-            ].map((item) => (
-              <div key={item.title} className="rounded-3xl border border-outline/12 bg-courtDeep/80 shadow-soft p-4">
-                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-cream/70 text-sm leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </section>
-
-          <section id="screens" className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold">Screenshots</h2>
-              <span className="text-xs px-3 py-1 rounded-full border border-outline/25 text-cream/70">Native UI</span>
+        <main className="space-y-14 pb-20">
+          <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[40px] bg-cream/5 blur-3xl" aria-hidden />
+              <img
+                src="/screenshots/Game-Screen-2.png"
+                alt="Watch screen"
+                className="w-full h-full max-h-[520px] object-contain bg-court"
+                onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
+              />
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {screenshots.map(({ title, src }) => (
-                <figure key={title} className="rounded-3xl overflow-hidden border border-outline/15 bg-courtDeep/80 shadow-soft">
-                  <div className="bg-court px-4 py-3 flex items-center justify-between">
-                    <figcaption className="font-semibold">{title}</figcaption>
-                    <span className="text-[11px] px-2 py-1 rounded-full border border-outline/30 text-cream/70">Preview</span>
-                  </div>
-                  <img
-                    src={src}
-                    alt={title}
-                    className="w-full h-[320px] object-contain bg-court"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://dummyimage.com/600x1200/0f3b2d/ced6c0&text=Screenshot';
-                    }}
-                  />
-                </figure>
-              ))}
+            <div className="space-y-3">
+              <h2 className="uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Track matches on apple watch</h2>
             </div>
           </section>
-
-          <section className="rounded-[28px] border border-outline/12 bg-courtDeep/70 shadow-soft p-6 space-y-3">
-            <h3 className="text-xl font-semibold">What’s inside</h3>
-            <ul className="space-y-2 text-cream/75 text-sm leading-relaxed">
-              <li>✔️ Best-of-3 and Best-of-5 match formats</li>
-              <li>✔️ Undo anytime, plus change-sides reminders</li>
-              <li>✔️ Match history with set-by-set tiles</li>
-              <li>✔️ Designed for outdoor contrast and low-distraction colors</li>
-              <li>ℹ️ No cloud sync or web sharing—scores live locally on your devices.</li>
-            </ul>
+          <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
+            <div className="space-y-3">
+              <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Ready to play in seconds</h2>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
+              <img
+                src="/screenshots/Game-Setup.png"
+                alt="Game setup"
+                className="w-[480px] h-full object-contain bg-court"
+                onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
+              />
+            </div>
+          </section>
+          <section className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center">
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
+              <img
+                src="/screenshots/History-Screen.png"
+                alt="Game setup"
+                className="w-[480px] h-full object-contain bg-court"
+                onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
+              />
+            </div>
+            <div className="space-y-3">
+              <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">All your matches in one place</h2>
+            </div>
           </section>
         </main>
 
         <footer className="pb-12 text-cream/60 text-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <span>Tennis Score · Native iOS &amp; watchOS</span>
-            <div className="flex gap-4 flex-wrap">
-              <a href="mailto:hello@tennisscore.app" className="hover:text-cream">hello@tennisscore.app</a>
-              <a href="#privacy" className="hover:text-cream">Privacy</a>
-            </div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xl">
+            <a href="#contact">Contact</a>
+            <a href="#privacy" className="hover:text-cream">Privacy Policy</a>
           </div>
         </footer>
       </div>
