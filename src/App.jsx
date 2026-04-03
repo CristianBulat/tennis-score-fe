@@ -34,7 +34,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3 justify-center sm:justify-start">
                 <a
                   href={APP_STORE_URL}
                   className="px-4 py-3 rounded-2xl bg-cream text-court font-semibold shadow-soft border border-outline/30 hover:bg-cream/90 transition focus:outline-none focus:ring-2 focus:ring-cream/60 inline-flex items-center justify-center gap-2 whitespace-nowrap"
@@ -57,52 +57,52 @@ function App() {
               <img
                 src="/screenshots/Game-Screen.png"
                 alt="Live scoring screen"
-                className="relative w-full h-full object-contain rounded-[80px] "
+                className="relative w-full h-full object-contain "
               />
             </div>
           </div>
         </header>
 
         <main className="space-y-14 pb-20">
-          <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center">
-            <div className="relative order-2 lg:order-1">
+          <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] items-center justify-items-center">
+            <div className="relative order-2 lg:order-1 w-full">
               <div className="absolute -inset-6 rounded-[40px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/Game-Screen-2.png"
                 alt="Watch screen"
-                className="w-full h-full max-h-[520px] object-contain bg-court"
+                className="w-full h-full max-h-[520px] object-contain bg-court mb-6 lg:mb-0"
                 onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
               />
             </div>
-            <div className="space-y-3 order-1 lg:order-2">
+            <div className="space-y-3 order-1 lg:order-2 text-center lg:text-left">
               <h2 className="uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Track matches on apple watch</h2>
             </div>
           </section>
-          <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center">
-            <div className="space-y-3 order-1">
+          <section className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-center justify-items-center">
+            <div className="space-y-3 order-1 text-center lg:text-left">
               <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">Ready to play in seconds</h2>
             </div>
-            <div className="relative order-2">
+            <div className="relative order-2 w-full">
               <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/Game-Setup.png"
                 alt="Game setup"
-                className="w-[480px] h-full object-contain bg-court"
+                className="w-[480px] max-w-full h-full object-contain bg-court mb-6 lg:mb-0 mx-auto"
                 onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
               />
             </div>
           </section>
-          <section className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center">
-            <div className="relative order-2 lg:order-1">
+          <section className="grid gap-8 lg:grid-cols-[1fr_1fr] items-center justify-items-center">
+            <div className="relative order-2 lg:order-1 w-full">
               <div className="absolute -inset-6 rounded-[32px] bg-cream/5 blur-3xl" aria-hidden />
               <img
                 src="/screenshots/History-Screen.png"
                 alt="Game setup"
-                className="w-[480px] h-full object-contain bg-court"
+                className="w-[480px] max-w-full h-full object-contain bg-court mb-6 lg:mb-0 mx-auto"
                 onError={(e) => { e.currentTarget.src = 'https://dummyimage.com/900x1600/0f3b2d/ced6c0&text=History'; }}
               />
             </div>
-            <div className="space-y-3 order-1 lg:order-2">
+            <div className="space-y-3 order-1 lg:order-2 text-center lg:text-left">
               <h2 className=" uppercase tracking-[0.18em] text-cream/60 font-sans text-3xl">All your matches in one place</h2>
             </div>
           </section>
