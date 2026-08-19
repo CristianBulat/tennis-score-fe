@@ -111,7 +111,7 @@ function App() {
         <footer className="pb-12 text-cream/60 text-sm">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xl">
             <a href="#contact">Contact</a>
-            <a href="#privacy" className="hover:text-cream">Privacy Policy</a>
+            <a href="/privacy" className="hover:text-cream">Privacy Policy</a>
           </div>
         </footer>
       </div>
